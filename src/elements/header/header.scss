@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+
+$icon: 1.5rem;
+
+.main-container-header {
+  width: 100%;
+  height: 113px;
+  position: relative;
+}
+
+.upper-container {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e3e3e3;
+  padding: 0 1rem;
+}
+
+.header-icons {
+  width: $icon;
+  height: $icon;
+}
+
+.search-icon-container {
+  //
+}
+
+.header-main-logo {
+  //
+}
+
+.account-shopping-and-navigation-icons {
+  .account-icon-container {
+    display: none;
+  }
+
+  .shopping-icon-container {
+    display: none;
+  }
+}
+
+.custom-navigation-icon-container {
+  width: $icon;
+  height: $icon;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  .line-one {
+    width: 100%;
+    height: 3px;
+    background: #000;
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  }
+
+  .line-two {
+    width: 100%;
+    height: 3px;
+    background: #000;
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  }
+}
+
+.move-icon-true {
+  transform: translateX(500%);
+
+  .rotate-one-true {
+    transform: rotate(-15deg);
+  }
+
+  .rotate-two-true {
+    transform: rotate(15deg);
+  }
+}
+
+.lower-container {
+  display: none;
+}
+
+.left-navigation-bar {
+  width: 55%;
+  height: 100vh;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  padding: 2.5rem 0;
+  z-index: 4;
+
+  ul {
+    li {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: capitalize;
+      color: #000000;
+    }
+  }
+}
+
+.slide-true {
+  transform: translateX(-100%);
+}
+
+// ///////////////////Laptop///////////////////////////////
+
+@media only screen and (min-width: 770px) {
+  .main-container-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 1.5rem;
+    margin: 0 auto;
+  }
+
+  .upper-container {
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    align-items: unset;
+    padding: 0;
+    padding-bottom: 1rem;
+  }
+
+  .header-icons {
+    width: $icon;
+    height: $icon;
+  }
+
+  .search-icon-container {
+    width: 33%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .header-main-logo {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .account-shopping-and-navigation-icons {
+    width: 33%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 22px;
+
+    .account-icon-container,
+    .shopping-icon-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: $icon/1.5;
+        height: $icon/1.5;
+        margin-right: 0.4rem;
+      }
+
+      span {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        text-transform: capitalize;
+        color: #1e2832;
+      }
+    }
+  }
+
+  .custom-navigation-icon-container {
+    display: none;
+  }
+
+  .lower-container {
+    display: block;
+    padding-top: 1.5rem;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: auto;
+
+      li {
+        list-style-type: none;
+        flex: none;
+        flex-grow: 0;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.8rem;
+        line-height: 24px;
+        text-transform: capitalize;
+        color: #000000;
+      }
+    }
+  }
+
+  .left-navigation-bar{
+    display: none;
+  }
+
+}
+// ///////////laptop m-l size/////////////////////
+
+@media only screen and (min-width: 1250px){
+  .lower-container{
+    ul{
+      li{
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// /////////////////4K///////////////////////
+
+@media only screen and (min-width: 2000px) {
+  .main-container-header{
+    padding-top: 2.5rem;
+  }
+  .upper-container{
+    padding-bottom: 2rem;
+    .account-shopping-and-navigation-icons{
+      .account-icon-container,
+      .shopping-icon-container{
+        span{
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  .lower-container{
+    padding-top: 2rem;
+    ul{
+      li{
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
