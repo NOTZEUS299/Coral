@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@300;400;500&display=swap");
 
 // ///////////////////Mobile & Tablets//////////////////////////////
 
@@ -6,9 +6,8 @@
   width: 100%;
   height: auto;
   background: rgba(30, 40, 50, 0.05);
-  padding-bottom: 8rem;
 
-  .top-main-container {
+  .container-one-home-page {
     width: 100%;
     height: 29.5rem;
 
@@ -22,7 +21,7 @@
         width: 18rem;
         height: 25rem;
         position: absolute;
-        background: rgba(0, 0, 0, 0.5);
+        background: #00000080;
         border: 2px solid rgba(0, 0, 0, 0.25);
         border-radius: 160px 0px;
         z-index: 1;
@@ -49,17 +48,17 @@
           margin-bottom: 1rem;
         }
         button {
-            width: 80px;
-            height: 20px;
-            border: 0;
-            color: white;
-            background: transparent;
-            font-size: 1rem;
-            border-bottom: 1px solid white;
+          width: 80px;
+          height: 25px;
+          border: 0;
+          color: white;
+          background: transparent;
+          font-size: 1rem;
+          border-bottom: 1px solid white;
 
-            img{
-                display: none;
-            }
+          img {
+            display: none;
+          }
         }
       }
 
@@ -107,7 +106,749 @@
         top: 0;
       }
     }
+  }
+
+  .container-two-home-page {
+    width: 100%;
+    height: max-content;
+    background: #fff;
+    margin-top: 10rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .brands-container {
+      width: 90%;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      top: 1.5rem;
+
+      img {
+        width: 20%;
+        aspect-ratio: 20/7;
+        object-fit: contain;
+      }
+    }
+
+    .hot-category-container {
+      width: 90%;
+      height: fit-content;
+      margin-top: 4.3rem;
+      position: relative;
+
+      .hot-category-text {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: #000000;
+        margin-bottom: 1rem;
+      }
+
+      .hot-category-card-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 15px;
+
+        .hot-category-product-card {
+          width: 100%;
+          height: 100%;
+          background: #e3e3e3;
+          position: relative;
+          &:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 4/4;
+            object-fit: fill;
+          }
+        }
+      }
+    }
+    .product-grid-container {
+      width: 90%;
+      margin-top: 4.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        text-align: center;
+        text-transform: capitalize;
+        color: #000000;
+      }
+
+      .product-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: min-content;
+        margin: 1rem 0 1rem;
+
+        ul {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 65%;
+
+          li {
+            list-style-type: none;
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 0.5rem;
+            text-transform: capitalize;
+            color: rgba(0, 0, 0, 0.5);
+            &:first-child {
+              color: #000000;
+            }
+          }
+        }
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #1e2832;
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 0.5rem;
+          text-transform: capitalize;
+          color: #ffffff;
+          padding: 0 0.5rem;
+          img {
+            width: 0.5rem;
+            height: 0.5rem;
+            margin-right: 0.2rem;
+          }
+        }
+      }
+
+      .product-cards-container {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 15px;
+
+        .product-card {
+          width: 100%;
+          height: max-content;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          section {
+            width: 100%;
+            &:first-child {
+              position: relative;
+              img {
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+            &:last-child {
+              height: 32.5px;
+              margin-top: 2.5px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              p {
+                font-size: 0.6rem;
+                font-family: "Open Sans";
+                font-style: normal;
+                font-weight: 600;
+                text-transform: capitalize;
+                color: #000000;
+              }
+              div {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                p {
+                  &:first-child {
+                    font-family: "Open Sans";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 0.6rem;
+                    text-transform: capitalize;
+                    color: rgba(0, 0, 0, 0.5);
+                  }
+                  &:last-child {
+                    .product-price {
+                      font-family: "Open Sans";
+                      font-style: normal;
+                      font-weight: 600;
+                      font-size: 0.6rem;
+                      text-align: right;
+                      text-transform: capitalize;
+                      color: black;
+                    }
+
+                    .product-price-with-discount-true {
+                      color: rgba(0, 0, 0, 0.5);
+                    }
+
+                    .card-discount-true {
+                      color: #ff6f61;
+                      margin-left: 0.5rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .swiper-card-container {
+        display: block;
+      }
+    }
+    .brand-banner-container {
+      width: 100%;
+      height: 60vh;
+      margin-top: 3rem;
+      background: #010204;
+      position: relative;
+      display: flex;
+      justify-content: left;
+      align-items: flex-end;
+      overflow: hidden;
+      .brand-banner-background-img {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0rem;
+      }
+
+      .zara-bg-logo {
+        position: absolute;
+        top: 5%;
+        right: 0;
+        width: 60%;
+      }
+      .brand-banner-content {
+        width: 80%;
+        height: 65%;
+        position: relative;
+        z-index: 4;
+        margin-left: 1rem;
+        .zara-logo {
+          width: 23%;
+        }
+        p {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 0.8rem;
+          line-height: 1.5rem;
+          text-transform: capitalize;
+          color: #ffffff;
+          margin: 1.5rem 0;
+        }
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.5rem 0.5rem;
+          gap: 8px;
+          width: 45%;
+          height: 15%;
+          background: #ffffff;
+          text-transform: capitalize;
+        }
+      }
+    }
+    #swiper-product-container {
+      margin-block: 3rem;
+    }
+  }
+  .container-three-home-page {
+    background: rgba(30, 40, 50, 0.05);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+    div {
+      width: 90%;
+      margin: 0 auto;
+      h2 {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        text-align: center;
+        text-transform: capitalize;
+        color: #000000;
+        margin-block: 1.5rem;
+      }
+      &:first-child {
+        div {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      &:last-child {
+        div {
+          margin-block: 1rem;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          input {
+            width: 74%;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 0.6rem;
+            line-height: 22px;
+            text-transform: capitalize;
+            color: rgba(30, 40, 50, 0.5);
+            border: 0;
+            border-bottom: 1px solid #000000;
+            background: transparent;
+            padding-left: 0.4rem;
+            &:focus {
+              outline: 0;
+            }
+          }
+          button {
+            width: 20%;
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 0.6rem;
+            line-height: 22px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #1e2832;
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid #000000;
+          }
+        }
+      }
+    }
+  }
+  .footer-home-page {
+    background: white;
+    position: relative;
+    padding-top: 6rem;
+    padding-bottom: 10rem;
+    width: 100%;
+    height: max-content;
+    .footer-content {
+      width: 90%;
+      margin: 0 auto;
+      .coral-description {
+        img {
+          width: 60%;
+          margin: 0 20%;
+        }
+        .description-paragraph {
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          text-transform: capitalize;
+          color: rgba(30, 40, 50, 0.75);
+          margin: 2rem 0 1.5rem;
+        }
+        .footer-socials-navigation {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          padding: 0px;
+          gap: 36px;
+          p {
+            .social-icons {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1.5rem;
+              line-height: 20px;
+              text-align: center;
+              color: #1e2832;
+            }
+          }
+        }
+      }
+      .catalog-about-us-and-customer-care {
+        margin-top: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        div {
+          margin-block: 2rem;
+          ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            width: 100%;
+            li {
+              &:first-child {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 22px;
+                font-size: 1rem;
+              }
+              list-style-type: none;
+              font-family: "Open Sans";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 24px;
+              text-transform: capitalize;
+              color: #1e2832;
+            }
+          }
+        }
+      }
+    }
+    .footer-end-bar {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #1e2832;
+      padding: 0.5rem 0;
+      .copy-rights {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-transform: capitalize;
+        color: #ffffff;
+      }
+      .payments-available {
+        margin-block: 0.5rem;
+      }
+      .scroll-to-top {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 0.2rem;
+        p {
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          text-transform: capitalize;
+          color: #ffffff;
+          .scroll-to-top-arrow {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 14px;
+          }
+        }
+      }
+    }
+  }
 }
+
+// ////////////////////common class/////////////////////
+
+.product-card-ribbon {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  z-index: 2;
+  padding: 0.01rem 0.2rem;
+  width: 29px;
+}
+
+.sale {
+  background: #000;
+}
+
+.hot {
+  background: #ff6f61;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: transparent;
+  position: relative;
+  z-index: 5;
+}
+
+.swiper-button-next:after {
+  background: url(../utils/images/right.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-prev:after {
+  background: url(../utils/images/left.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// ///////////////////////Mobile m-l sizes////////////////
+
+@media only screen and (min-width: 375px) {
+  .main-container-home-page {
+    .container-three-home-page {
+      div {
+        &:first-child {
+          div {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+      }
+    }
+  }
+}
+
+// /////////////////////Tablet//////////////////////////
+
+@media only screen and (min-width: 450px) {
+  .main-container-home-page {
+    .container-two-home-page {
+      .hot-category-container {
+        height: fit-content;
+        margin-top: 6rem;
+        .hot-category-text {
+          position: absolute;
+          top: 9.7rem;
+          left: -9.3rem;
+          transform: rotate(-90deg);
+          font-size: 1rem;
+          margin-bottom: 0;
+        }
+        .hot-category-card-container {
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          gap: 15px;
+          .hot-category-product-card {
+            img {
+              object-fit: fill;
+            }
+          }
+        }
+      }
+      .product-grid-container {
+        h2 {
+          font-size: 1.3rem;
+        }
+        .product-navigation {
+          ul {
+            width: 30%;
+            li {
+              font-size: 0.6rem;
+            }
+          }
+          button {
+            font-size: 0.6rem;
+            img {
+              width: 0.5rem;
+              height: 0.5rem;
+            }
+          }
+        }
+        .product-cards-container {
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          gap: 15px;
+          .product-card {
+            section {
+              &:last-child {
+                height: 45px;
+                margin-top: 10px;
+                p {
+                  font-size: 0.8rem;
+                }
+                div {
+                  p {
+                    &:first-child {
+                      font-size: 0.8rem;
+                    }
+                    &:last-child {
+                      .product-price {
+                        font-size: 0.8rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .brand-banner-container {
+        justify-content: right;
+        .zara-bg-logo {
+          width: 38%;
+          top: 20%;
+        }
+        .brand-banner-content {
+          width: 35%;
+          margin-right: 2.5rem;
+          .zara-logo {
+            width: 35%;
+          }
+          button {
+            width: 8rem;
+          }
+        }
+      }
+    }
+    .container-three-home-page {
+      div {
+        h2 {
+          font-size: 1.3rem;
+          margin-block: 2rem;
+        }
+        &:first-child {
+          div {
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+          }
+        }
+        &:last-child {
+          div {
+            width: 20rem;
+            margin-bottom: 1.5rem;
+            gap: 15px;
+            input {
+              width: 82%;
+              font-size: 0.8rem;
+            }
+            button {
+              width: 18%;
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+    .footer-home-page {
+      width: 100%;
+      height: max-content;
+      padding: 4rem 0 5rem;
+      .footer-content {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        .coral-description {
+          width: 35%;
+          padding-right: 0.5rem;
+          img {
+            width: 50%;
+            margin: 0;
+          }
+          .description-paragraph {
+            margin: 1.2rem 0 1rem;
+            font-size: 0.7rem;
+          }
+          .footer-socials-navigation {
+            justify-content: left;
+            gap: 20px;
+            p {
+              .social-icons {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+        .catalog-about-us-and-customer-care {
+          margin-top: 0;
+          flex-wrap: nowrap;
+          width: 65%;
+          border: 1px solid white;
+          div {
+            margin-block: 0;
+            ul {
+              column-gap: 0;
+              margin-left: 0.5rem;
+              li {
+                &:first-child {
+                  font-size: 1rem;
+                }
+                line-height: 25px;
+                font-size: 0.8rem;
+              }
+            }
+          }
+          .footer-catalog {
+            width: 20%;
+          }
+          .footer-about-us {
+            width: 40%;
+          }
+          .customer-services {
+            width: 40%;
+          }
+        }
+      }
+      .footer-end-bar {
+        padding: 0 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .copy-rights {
+          font-size: 0.8rem;
+        }
+        .payments-available {
+          width: 25%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 100%;
+          }
+        }
+        .scroll-to-top {
+          p {
+            font-size: 0.8rem;
+            .scroll-to-top-arrow {
+              font-size: 0.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // ///////////////////Laptop///////////////////////////////
@@ -119,7 +860,7 @@
     background: rgba(30, 40, 50, 0.05);
     padding-bottom: 0;
 
-    .top-main-container {
+    .container-one-home-page {
       width: 90%;
       height: 100vh;
       position: relative;
@@ -174,8 +915,8 @@
             text-transform: capitalize;
             color: #ffffff;
             background: #1e2832;
-            img{
-                display: block;
+            img {
+              display: block;
             }
           }
         }
@@ -202,36 +943,140 @@
     }
 
     .background-floral {
-        position: absolute;
-        top: 20rem;
+      position: absolute;
+      top: 20rem;
+      width: 100%;
+      height: 20rem;
+
+      div {
+        position: relative;
         width: 100%;
-        height: 20rem;
-  
-        div {
-          position: relative;
-          width: 100%;
-          height: 100%;
-  
-          .left-floral-pattern {
-            position: absolute;
-            left: 0;
-            bottom: 0;
+        height: 100%;
+
+        .left-floral-pattern {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+
+        .right-floral-pattern {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+    .container-two-home-page {
+      margin-top: 0;
+
+      .brands-container {
+        top: 4rem;
+
+        img {
+          width: 15%;
+        }
+      }
+      .hot-category-container {
+        height: fit-content;
+        margin-top: 12rem;
+        .hot-category-text {
+          top: 14rem;
+          left: -14rem;
+          font-size: 1.5rem;
+        }
+        .hot-category-card-container {
+          gap: 24px;
+        }
+      }
+      .product-grid-container {
+        margin-top: 6rem;
+        h2 {
+          font-size: 2rem;
+        }
+        .product-navigation {
+          margin: 1.5rem 0 1.5rem;
+          ul {
+            width: 30.5%;
+            li {
+              font-size: 0.8rem;
+            }
           }
-  
-          .right-floral-pattern {
-            position: absolute;
-            right: 0;
-            top: 0;
+          button {
+            font-size: 0.8rem;
+            img {
+              width: 0.7rem;
+              height: 0.7rem;
+            }
           }
         }
+        .product-cards-container {
+          gap: 24px;
+        }
+      }
+      .brand-banner-container {
+        height: 28.5rem;
+        margin-top: 6rem;
+
+        .zara-bg-logo {
+          width: 37%;
+          top: 10%;
+        }
+        .brand-banner-content {
+          width: 25%;
+          margin-right: 12.5rem;
+          .zara-logo {
+            width: 40%;
+          }
+        }
+      }
+      #swiper-product-container {
+        margin-block: 5.5rem;
+      }
+    }
+    .container-three-home-page {
+      div {
+        h2 {
+          font-size: 2rem;
+          margin-block: 3rem;
+        }
+        &:first-child {
+          div {
+            gap: 24px;
+          }
+        }
+        &:last-child {
+          div {
+            width: 30rem;
+            margin-bottom: 2rem;
+            gap: 24px;
+            input {
+              width: 82%;
+              border-width: 2px;
+            }
+            button {
+              width: 18%;
+              border-width: 2px;
+            }
+          }
+        }
+      }
+    }
+    .footer-home-page {
+      padding: 7rem 0 8rem;
     }
   }
+  // //////////////////common class//////////////
+  .product-card-ribbon {
+    padding: 0.1rem 0.6rem;
+    width: 40px;
+  }
 }
+
 // /////////////////laptop size m-l////////////
 
 @media only screen and (min-width: 1250px) {
   .main-container-home-page {
-    .top-main-container {
+    .container-one-home-page {
       .product-container-one {
         .product-content-one {
           width: 58%;
@@ -258,6 +1103,126 @@
         }
       }
     }
+    .container-two-home-page {
+      .hot-category-container {
+        height: fit-content;
+        .hot-category-text {
+          font-size: 2rem;
+          left: -18.8rem;
+          top: 18.8rem;
+        }
+      }
+      .product-grid-container {
+        .product-cards-container {
+          .product-card {
+            section {
+              &:last-child {
+                height: 50px;
+                margin-top: 10px;
+                p {
+                  font-size: 1rem;
+                }
+                div {
+                  p {
+                    &:first-child {
+                      font-size: 1rem;
+                    }
+                    &:last-child {
+                      .product-price {
+                        font-size: 1rem;
+                      }
+                      .card-discount-true {
+                        margin-left: 1rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .brand-banner-container {
+        height: 38.5rem;
+        margin-top: 8rem;
+
+        .zara-bg-logo {
+          width: 32%;
+          top: 14.5%;
+        }
+        .brand-banner-content {
+          width: 25%;
+          margin-right: 14rem;
+          .zara-logo {
+            width: 40%;
+          }
+          p {
+            font-size: 1rem;
+            margin: 2rem 0;
+          }
+          button {
+            font-size: 1.2rem;
+            padding: 0.8rem 0.5rem;
+            height: auto;
+            width: 10rem;
+          }
+        }
+      }
+      #swiper-product-container {
+        margin-block: 7.5rem;
+      }
+    }
+    .container-three-home-page {
+      div {
+        h2 {
+          margin-block: 4rem;
+        }
+        &:last-child {
+          div {
+            width: 30rem;
+            margin-bottom: 3rem;
+            input {
+              width: 82%;
+            }
+            button {
+              width: 18%;
+            }
+          }
+        }
+      }
+    }
+    .footer-home-page {
+      padding: 8rem 0 9rem;
+      .footer-content {
+        .coral-description {
+          width: 30%;
+          img {
+            width: 30%;
+          }
+          .description-paragraph {
+            width: 60%;
+            margin: 1rem 0 1.5rem;
+          }
+        }
+        .catalog-about-us-and-customer-care {
+          width: 40%;
+          .footer-catalog {
+            width: 33%;
+          }
+          .footer-about-us {
+            width: 33%;
+          }
+          .customer-services {
+            width: 33%;
+          }
+        }
+      }
+      .footer-end-bar {
+        .payments-available {
+          width: 20%;
+        }
+      }
+    }
   }
 }
 
@@ -265,7 +1230,7 @@
 
 @media only screen and (min-width: 2000px) {
   .main-container-home-page {
-    .top-main-container {
+    .container-one-home-page {
       width: 66%;
       height: 60rem;
       top: 30%;
@@ -306,5 +1271,207 @@
     .background-floral {
       top: 30rem;
     }
+
+    .container-two-home-page {
+      .brands-container {
+        top: 3rem;
+        width: 66%;
+        top: 6rem;
+        img {
+          width: 13%;
+          aspect-ratio: unset;
+        }
+      }
+      .hot-category-container {
+        width: 66%;
+        height: fit-content;
+        margin-top: 15rem;
+        .hot-category-text {
+          font-size: 2.4rem;
+          left: -22.6rem;
+          top: 21rem;
+        }
+      }
+      .product-grid-container {
+        width: 66%;
+        margin-top: 15rem;
+        h2 {
+          font-size: 3rem;
+        }
+        .product-navigation {
+          margin: 2.5rem 0;
+          ul {
+            li {
+              font-size: 1.3rem;
+            }
+          }
+          button {
+            font-size: 1.3rem;
+            img {
+              width: 1rem;
+              height: 1rem;
+            }
+          }
+        }
+        .product-cards-container {
+          .product-card {
+            section {
+              &:last-child {
+                height: 70px;
+                margin-top: 12px;
+                p {
+                  font-size: 1.3rem;
+                }
+                div {
+                  p {
+                    &:first-child {
+                      font-size: 1.3rem;
+                    }
+                    &:last-child {
+                      .product-price {
+                        font-size: 1.3rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .brand-banner-container {
+        height: 80vh;
+        margin-top: 10rem;
+
+        .zara-bg-logo {
+          width: 30%;
+          top: 10%;
+        }
+        .brand-banner-content {
+          width: 20%;
+          margin-right: 25rem;
+          .zara-logo {
+            width: 40%;
+          }
+          p {
+            font-size: 1.5rem;
+            margin: 3rem 0;
+            line-height: 3rem;
+          }
+          button {
+            font-size: 2rem;
+            padding: 1.2rem 0.6rem;
+            width: 15rem;
+          }
+        }
+      }
+      #swiper-product-container {
+        margin-block: 10rem;
+      }
+    }
+    .container-three-home-page {
+      padding-block: 2.5rem;
+      div {
+        h2 {
+          font-size: 3rem;
+          margin-block: 5rem;
+        }
+        &:first-child {
+          width: 66%;
+        }
+        &:last-child {
+          div {
+            width: 45rem;
+            margin-bottom: 4rem;
+            input {
+              width: 82%;
+              font-size: 1.3rem;
+              line-height: 40px;
+            }
+            button {
+              width: 18%;
+              font-size: 1.3rem;
+              line-height: 40px;
+            }
+          }
+        }
+      }
+    }
+    .footer-home-page {
+      padding: 12rem 0 14rem;
+      .footer-content {
+        width: 66%;
+        .coral-description {
+          width: 30%;
+          img {
+            width: 50%;
+          }
+          .description-paragraph {
+            width: 90%;
+            margin: 2.5rem 0 3.5rem;
+            font-size: 1.5rem;
+            line-height: 2rem;
+          }
+          .footer-socials-navigation {
+            gap: 50px;
+            p {
+              .social-icons {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+        .catalog-about-us-and-customer-care {
+          width: 70%;
+          div {
+            ul {
+              li {
+                &:first-child {
+                  font-size: 2rem;
+                  line-height: 45px;
+                }
+                font-size: 1.5rem;
+                line-height: 50px;
+              }
+            }
+          }
+          .footer-catalog {
+            width: 33%;
+          }
+          .footer-about-us {
+            width: 33%;
+          }
+          .customer-services {
+            width: 33%;
+          }
+        }
+      }
+      .footer-end-bar {
+        padding: 0.5rem 17%;
+        .copy-rights {
+          p{
+            font-size: 1.5rem;
+          }
+        }
+        .payments-available {
+          width: 20%;
+          img {
+          }
+        }
+        .scroll-to-top {
+          p {
+            font-size: 1.5rem;
+            .scroll-to-top-arrow {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  // common class
+  .product-card-ribbon {
+    font-size: 0.9rem;
+    width: 51px;
   }
 }
